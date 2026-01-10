@@ -1,0 +1,45 @@
+Communication Protocols
+UDP / TCP
+TCP is slow why?
+Collataral detail
+http Protocols?
+Websocket?
+bidirectional Communication
+gRPC?
+RFC?
+
+
+Web servers
+Ability to serve content?
+idea od caching 
+dynamic
+types
+threading
+example: nginx - websever and proxy
+
+
+Databases
+ACID?
+
+
+
+Proxies
+reverse proxy
+cacing layers
+Service meshes 
+
+caching
+
+Messaging system
+Queue
+
+
+message formats
+json/xml
+protocol buffers
+
+security
+tls
+man in middle attacks
+firewalls
+denial of serice attacks

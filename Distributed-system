@@ -1,0 +1,38 @@
+Distributed Systems
+Group of computers working together as to appear as a single computer to the end user
+
+Example
+A traditional stack
+img1
+
+Traditional DB are stored on the filesystem of the single machine, whenever we have a fetch/insert information, you talk directly to machine. 
+For us to distribute this database system, we’d need to have this database run on multiple machines at the same time. The user must be able to talk to whichever machine he chooses and should not be able to tell that he is not talking to a single machine — if he inserts a record into node#1, node #3 must be able to return that record.
+img2
+
+Why distribute the system ?
+we always distribute based on necessity. The truth of the matter is -- managing a distributed system is complex topic choke full of pitfalls, Its a headache to deploy, maintain and debug a distributed system.
+
+So why distributed system? HORIZONTAL SCALING
+Going back to traditional setup, only way to handle more traffic would be to upgrade the hardware of server. This is called VERTICAL SCALING 
+Scaling Vertically is well and good but only up to a certain limit.
+
+Scaling Horizontally simply means adding more machines rather than upgrading hardware of single machine
+
+Best part of Horizontal scaling is that there is no cap on how much you can scale.
+Other Benefits include FAULT TOLERANCE and LOW LATENCY
+
+
+Scaling the database
+Imagine that the application is a hit and DB starts getting twice as many queries per second as it can handle.
+In typical web environment you normally read information much more frequently than you insert it.
+
+Way to increase read performance by so-called PRIMARY-REPLICA REPLICATION STRATERGY, suppose we add two new instances which sync up with the main one, the only catch is that you can ONLY READ from these new instances.
+
+Modification and Insertion on the Primary DB
+
+BUT PITFALL...!
+We immediatly lost the C in ACID i.e CONSISTENCY.
+
+Propagating new information from primary db does not happen instantaneously. There exists a time window
+
+Distributed systems come with a handfull of trade-offs.
